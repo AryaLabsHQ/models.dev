@@ -2,3 +2,4 @@
 .sst
 dist
 node_modules
+.wrangler

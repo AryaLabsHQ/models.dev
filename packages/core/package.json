@@ -5,7 +5,7 @@
   "type": "module",
   "module": "./src/index.ts",
   "exports": {
-    ".": "./src /index.ts",
+    ".": "./src/index.ts",
     "./models.json": "./dist/models.json",
     "./models.min.json": "./dist/models.min.json"
   },

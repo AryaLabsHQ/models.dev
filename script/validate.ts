@@ -1,6 +1,6 @@
 #!/usr/bin/env bun
 
-import { generate } from "models.dev";
+import { generate } from "../packages/core/src/index.ts";
 import path from "path";
 import { ZodError } from "zod";
 

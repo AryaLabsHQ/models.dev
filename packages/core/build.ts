@@ -5,7 +5,7 @@ import path from "path";
 import { $ } from "bun";
 
 async function build() {
-  console.log("Generating models.json...");
+  console.log("Generating all.json...");
 
   const providersPath = path.join(import.meta.dir, "../../providers");
   const models = await generate(providersPath);
@@ -13,15 +13,15 @@ async function build() {
   const distPath = path.join(import.meta.dir, "dist");
   await $`rm -rf ${distPath}`;
   await $`mkdir -p ${distPath}`;
-  const outputPath = path.join(distPath, "models.json");
+  const outputPath = path.join(distPath, "all.json");
 
   Bun.write(Bun.file(outputPath), JSON.stringify(models, null, 2));
   
-  console.log(`✅ Generated models.json (${Object.keys(models).length} providers)`);
+  console.log(`✅ Generated all.json (${Object.keys(models).length} providers)`);
   
-  const minifiedPath = path.join(distPath, "models.min.json");
+  const minifiedPath = path.join(distPath, "all.min.json");
   Bun.write(Bun.file(minifiedPath), JSON.stringify(models));
-  console.log("✅ Generated models.min.json");
+  console.log("✅ Generated all.min.json");
 }
 
 build().catch(console.error);

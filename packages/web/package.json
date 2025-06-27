@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@types/bun": "^1.2.0",
-    "models.dev": "workspace:*",
+    "@aryalabs/models": "workspace:*",
     "@cloudflare/vite-plugin": "^1.2.3",
     "vite": "^6.3.5",
     "wrangler": "^4.17.0"

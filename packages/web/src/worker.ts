@@ -1,5 +1,5 @@
 import { Hono } from 'hono'
-import modelsData from 'models.dev/models.json'
+import modelsData from '@aryalabs/models/all.json'
 
 const app = new Hono<{ Bindings: Environment }>()
 

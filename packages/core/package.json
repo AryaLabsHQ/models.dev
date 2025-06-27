@@ -9,6 +9,9 @@
     "./all.json": "./dist/all.json",
     "./all.min.json": "./dist/all.min.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "bun build.ts",
     "prepublishOnly": "bun run build"
